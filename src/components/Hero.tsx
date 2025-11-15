@@ -110,7 +110,7 @@ const Hero = () => {
             </div>
             
             {/* Floating Name Tag */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-float backdrop-blur-sm">
+            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-card border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-bounce-slow backdrop-blur-sm">
               <h2 className="text-2xl font-bold text-primary">Shovidhyan D</h2>
             </div>
           </div>

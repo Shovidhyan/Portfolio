@@ -105,6 +105,19 @@ All colors MUST be HSL.
   .card-hover {
     @apply transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)];
   }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
 }
 
 @layer base {
