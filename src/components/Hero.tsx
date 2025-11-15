@@ -111,7 +111,7 @@ const Hero = () => {
             
             {/* Floating Name Tag */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-float backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-gradient">Shovidhyan D</h2>
+              <h2 className="text-2xl font-bold text-primary">Shovidhyan D</h2>
             </div>
           </div>
         </div>
