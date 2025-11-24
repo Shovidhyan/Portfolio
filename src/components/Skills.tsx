@@ -2,12 +2,12 @@ import { useEffect, useRef, useState } from "react";
 
 const skills = [
   {
-    name: "React js",
-    icon: "https://shovidhyan.github.io/Portfolio/assets/react-BVodAe_E.png",
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     description: "Expert in building interactive and dynamic web applications using React.js.",
   },
   {
-    name: "Node js",
+    name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     description: "Experienced in backend development, building REST APIs and handling server-side logic.",
   },
@@ -18,20 +18,21 @@ const skills = [
   },
   {
     name: "MongoDB",
-    icon: "https://shovidhyan.github.io/Portfolio/assets/mongodb-CqQwDSSN.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     description: "Proficient in NoSQL databases, managing data efficiently for scalable applications.",
   },
   {
     name: "AWS",
-    icon: "https://shovidhyan.github.io/Portfolio/assets/aws-C6ws3tXd.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
     description: "Hands-on experience with cloud computing, AWS services, and deployment strategies.",
   },
   {
     name: "Python",
-    icon: "https://shovidhyan.github.io/Portfolio/assets/python-SSX8JO-t.png",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     description: "Strong command over Python, including scripting, automation, and backend development.",
   },
 ];
+
 
 const Skills = () => {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);

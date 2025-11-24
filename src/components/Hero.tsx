@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import image1 from "./ui/assets/new12345.jpg";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -86,11 +87,11 @@ const Hero = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6 pt-8">
               <div className="space-y-2 group">
-                <div className="text-5xl font-bold text-gradient group-hover:scale-110 transition-transform">2++</div>
+                <div className="text-5xl font-bold text-gradient group-hover:scale-110 transition-transform">2+</div>
                 <p className="text-muted-foreground">Years of Experience in Web development</p>
               </div>
               <div className="space-y-2 group">
-                <div className="text-5xl font-bold text-gradient group-hover:scale-110 transition-transform">10++</div>
+                <div className="text-5xl font-bold text-gradient group-hover:scale-110 transition-transform">10+</div>
                 <p className="text-muted-foreground">Projects Worked in my career</p>
               </div>
             </div>
@@ -102,7 +103,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-glow-pulse" />
               <div className="relative rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_50px_hsl(var(--primary)/0.3)]">
                 <img 
-                  src="https://shovidhyan.github.io/Portfolio/assets/person-t0QSqOEg.png" 
+                  src={image1} 
                   alt="Shovidhyan D" 
                   className="w-full h-full object-cover"
                 />
@@ -111,7 +112,7 @@ const Hero = () => {
             
             {/* Floating Name Tag */}
             <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-card border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-bounce-slow backdrop-blur-sm">
-              <h2 className="text-2xl font-bold text-primary">Shovidhyan D</h2>
+              <h2 className="text-2xl font-bold text-primary">Shovidhyan Devaraj</h2>
             </div>
           </div>
         </div>

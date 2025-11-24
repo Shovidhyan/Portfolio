@@ -1,4 +1,5 @@
 import { Code, Video, Cpu, Palette, Database, Sparkles } from "lucide-react";
+import image1 from "./ui/assets/IMG-20241107-WA0018.jpg";
 
 const services = [
   {
@@ -100,7 +101,7 @@ const Services = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-glow-pulse" />
                 <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30">
                   <img 
-                    src="https://shovidhyan.github.io/Portfolio/assets/person-90MVM1SE.png" 
+                    src={image1}
                     alt="Developer" 
                     className="w-full h-full object-cover"
                   />

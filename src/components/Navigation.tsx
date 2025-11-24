@@ -50,7 +50,7 @@ const Navigation = () => {
             }}
             className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
           >
-            Shovidhyan
+            What’s up! I’m Shoviii
           </a>
 
           {/* Desktop Navigation */}

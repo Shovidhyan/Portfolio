@@ -21,8 +21,9 @@ const Index = () => {
       <footer className="border-t border-primary/20 py-8">
         <div className="container px-4 mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 Shovidhyan D. Crafted with passion and creativity.
-          </p>
+  © {new Date().getFullYear()} Shovidhyan D. Crafted with passion and creativity.
+</p>
+
         </div>
       </footer>
     </div>

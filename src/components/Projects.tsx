@@ -1,5 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import image1 from "./ui/assets/image.png";
+
 
 const projects = [
   {
@@ -7,13 +9,13 @@ const projects = [
     description: "A comprehensive facility management platform offering professional services with modern UI/UX design and seamless user experience.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
     github: "https://github.com/Shovidhyan/Motex-Facility-Services",
-    live: "https://github.com/Shovidhyan/Motex-Facility-Services",
+    live: "https://shovidhyan.github.io/Motex-Facility-Services/",
     tags: ["React", "TypeScript", "Tailwind"],
   },
   {
     title: "Cloud Kitchen Website",
     description: "A modern, responsive website for a kitchen service business featuring dynamic menu displays, online ordering system, and seamless user experience.",
-    image: "https://shovidhyan.github.io/Portfolio/assets/img1-XLfK_P_p.png",
+    image: image1,
     github: "https://github.com/Shovidhyan/laxnas-kitchen",
     live: "https://laxnas-kitchen-frontend-project.onrender.com/",
     tags: ["React", "Node.js", "MongoDB", "Express"],
@@ -23,7 +25,7 @@ const projects = [
     description: "An innovative accessibility tool that converts sign language gestures into speech, making communication more inclusive and accessible.",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&h=600&fit=crop",
     github: "https://github.com/Shovidhyan/Sign-to-Speech",
-    live: "https://github.com/Shovidhyan/Sign-to-Speech",
+    live: "https://shovidhyan.github.io/Sign-to-Speech/",
     tags: ["TypeScript", "AI/ML", "Accessibility"],
   },
   {
@@ -31,7 +33,7 @@ const projects = [
     description: "A productivity application for managing tasks and projects efficiently with an intuitive interface and powerful features.",
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
     github: "https://github.com/Shovidhyan/Task-Master",
-    live: "https://github.com/Shovidhyan/Task-Master",
+    live: "https://shovidhyan.github.io/Task-Master/",
     tags: ["TypeScript", "React", "Productivity"],
   },
   {
@@ -39,17 +41,10 @@ const projects = [
     description: "A web application that converts written text into natural-sounding speech, enhancing accessibility and user experience.",
     image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=600&fit=crop",
     github: "https://github.com/Shovidhyan/Text-to-Speech",
-    live: "https://github.com/Shovidhyan/Text-to-Speech",
+    live: "https://shovidhyan.github.io/Text-to-Speech/",
     tags: ["JavaScript", "Web Speech API", "Audio"],
   },
-  {
-    title: "Backend MNS",
-    description: "A robust backend system built with modern technologies to handle complex business logic and data management.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
-    github: "https://github.com/Shovidhyan/Backend_MNS",
-    live: "https://github.com/Shovidhyan/Backend_MNS",
-    tags: ["JavaScript", "Node.js", "Backend"],
-  },
+  
 ];
 
 const Projects = () => {
