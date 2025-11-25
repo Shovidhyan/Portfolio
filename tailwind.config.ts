@@ -100,6 +100,23 @@ export default {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        // NEW: Fire ignition effect
+        "fire-ignite": {
+          "0%": { opacity: "0", transform: "scale(0.8) translateY(10%)" },
+          "20%": { opacity: "0.8", transform: "scale(1.1) translateY(0)" },
+          "100%": { opacity: "0", transform: "scale(1.05) translateY(-5%)" },
+        },
+        // NEW: Subtle flickering after ignition
+        "fire-flicker": {
+          "0%, 100%": { opacity: "0.3", transform: "scale(1)" },
+          "50%": { opacity: "0.5", transform: "scale(1.02) translateY(-2px)" },
+        },
+        // NEW: Lightning strike effect
+        "lightning-strike": {
+          "0%": { opacity: "0", transform: "scale(0.5) rotate(-15deg)" },
+          "10%, 30%": { opacity: "1", transform: "scale(1.3) rotate(0deg)", filter: "brightness(2) drop-shadow(0 0 10px white)" },
+          "100%": { opacity: "0", transform: "scale(0.8) rotate(15deg)" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +129,10 @@ export default {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "gradient-shift": "gradient-shift 3s ease infinite",
+        // NEW Animations
+        "fire-ignite": "fire-ignite 1.5s ease-out forwards",
+        "fire-flicker": "fire-flicker 3s ease-in-out infinite 1.5s",
+        "lightning-strike": "lightning-strike 0.8s ease-out forwards",
       },
       backgroundSize: {
         "200%": "200% 200%",

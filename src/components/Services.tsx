@@ -1,40 +1,90 @@
+import { useEffect, useState } from "react";
 import { Code, Video, Cpu, Palette, Database, Sparkles } from "lucide-react";
 import image1 from "./ui/assets/IMG-20241107-WA0018.jpg";
 
+
 const services = [
+  // 🔥 CODING & TECH SERVICES FIRST
   {
     icon: Code,
     title: "Full-Stack Development",
-    description: "Building real-world solutions using MERN stack, Python, and AI with a focus on smart mobility, accessibility, and sustainability.",
-  },
-  {
-    icon: Video,
-    title: "Content Creation",
-    description: "Crafting engaging technical content that simplifies complex concepts, empowers learners, and showcases real-world tech applications.",
+    description:
+      "Building real-world solutions using MERN stack, Python, and AI with a focus on smart mobility, accessibility, and sustainability.",
   },
   {
     icon: Database,
     title: "Python Development",
-    description: "Developing robust backend systems, automation scripts, and AI-powered applications using Python to solve real-world challenges efficiently.",
+    description:
+      "Developing robust backend systems, automation scripts, and AI-powered applications using Python to solve real-world challenges efficiently.",
   },
   {
     icon: Cpu,
     title: "AI Development",
-    description: "Designing intelligent applications that leverage artificial intelligence to automate, analyze, and enhance user experiences and decision-making.",
+    description:
+      "Designing intelligent applications that leverage artificial intelligence to automate, analyze, and enhance user experiences and decision-making.",
   },
+
+  // 🎨 CREATIVE / DESIGN SERVICES AFTER
   {
     icon: Palette,
     title: "Graphic Design",
-    description: "Delivering visually appealing designs, UI/UX elements, and brand assets tailored to enhance engagement and identity across platforms.",
+    description:
+      "Delivering visually appealing designs, UI/UX elements, and brand assets tailored to enhance engagement and identity across platforms.",
   },
+  {
+    icon: Video,
+    title: "Content Creation",
+    description:
+      "Crafting engaging technical content that simplifies complex concepts, empowers learners, and showcases real-world tech applications.",
+  },
+
+  // ✨ INNOVATION LAST
   {
     icon: Sparkles,
     title: "Innovation & More",
-    description: "Constantly exploring new technologies and innovative solutions to create cutting-edge digital experiences.",
+    description:
+      "Constantly exploring new technologies and innovative solutions to create cutting-edge digital experiences.",
   },
 ];
 
+const rotatingRoles = [
+  "MERN Stack Developer",
+  "AI Developer",
+  "Python Developer",
+  "Tech Innovator",
+  "Problem Solver",
+];
+
 const Services = () => {
+  // ===========================
+  // Inline Typing Effect (Hero-style)
+  // ===========================
+  const [typedText, setTypedText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = rotatingRoles[roleIndex];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (typedText.length < currentRole.length) {
+          setTypedText(currentRole.slice(0, typedText.length + 1));
+        } else {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        if (typedText.length === 0) {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % rotatingRoles.length);
+        } else {
+          setTypedText(currentRole.slice(0, typedText.length - 1));
+        }
+      }
+    }, isDeleting ? 50 : 100);
+
+    return () => clearTimeout(timeout);
+  }, [typedText, isDeleting, roleIndex]);
+
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background Effects */}
@@ -51,6 +101,7 @@ const Services = () => {
           <p className="text-xl text-muted-foreground">What I Offer</p>
         </div>
 
+        {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -89,20 +140,29 @@ const Services = () => {
         <div className="relative max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl p-12 border border-primary/20 overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-transparent" />
+
             <div className="relative grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold text-gradient">MERN Stack Developer</h3>
+                {/* Typing Effect */}
+                <h3 className="text-3xl font-bold text-gradient flex items-center">
+                  {typedText}
+                  <span className="animate-pulse ml-1">|</span>
+                </h3>
+
                 <p className="text-xl text-foreground">Crafting Digital Solutions</p>
+
                 <p className="text-muted-foreground leading-relaxed">
-                  Passionate about creating seamless, scalable, and innovative web applications that solve real-world problems.
+                  Passionate about creating seamless, scalable, and innovative web applications
+                  that solve real-world problems and deliver delightful user experiences.
                 </p>
               </div>
+
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-glow-pulse" />
                 <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30">
-                  <img 
+                  <img
                     src={image1}
-                    alt="Developer" 
+                    alt="Developer"
                     className="w-full h-full object-cover"
                   />
                 </div>

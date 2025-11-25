@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
-import image1 from "./ui/assets/new12345.jpg";
+import image1 from "./ui/assets/Prof.jpg";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -9,6 +9,7 @@ const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // --- Typing Effect Logic ---
   useEffect(() => {
     const currentRole = roles[roleIndex];
     const timeout = setTimeout(() => {
@@ -49,13 +50,13 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold">
-                <span className="text-gradient bg-200% animate-gradient-shift">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mt-20 sm:mt-0">
+                <span className="text-gradient bg-200% animate-gradient-shift block">
                   MERN Stack
                 </span>
-                <br />
-                <span className="text-foreground">Developer</span>
+                <span className="text-foreground block">Developer</span>
               </h1>
+
               <div className="h-16 flex items-center">
                 <p className="text-xl md:text-2xl text-muted-foreground">
                   Also I am <span className="text-primary font-semibold">{typedText}</span>
@@ -65,17 +66,17 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary-glow hover:to-accent-glow transition-all duration-300 glow-effect group"
                 onClick={scrollToContact}
               >
                 Hire Me
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-primary/50 hover:bg-primary/10 hover:border-primary transition-all duration-300"
                 onClick={() => window.location.href = "mailto:shovidhyan77@gmail.com"}
               >
@@ -97,21 +98,28 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
-          <div className="relative animate-slide-in-right">
-            <div className="relative z-10">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-glow-pulse" />
-              <div className="relative rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_50px_hsl(var(--primary)/0.3)]">
-                <img 
-                  src={image1} 
-                  alt="Shovidhyan D" 
-                  className="w-full h-full object-cover"
+          {/* Right Content - Profile Image Area */}
+          <div className="relative animate-slide-in-right my-16 lg:my-0">
+            <div className="relative z-10 flex justify-center items-center">
+              
+              {/* REMOVED: Lightning Effects */}
+              {/* REMOVED: Fire/Flicker Effects */}
+
+              {/* Standard Soft Glow (Kept for aesthetics, but steady/pulsing, not flickering) */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-full blur-2xl opacity-30 animate-glow-pulse -z-20" />
+
+              {/* Image Container */}
+              <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full overflow-hidden border-4 border-primary/50 shadow-[0_0_50px_hsl(var(--primary)/0.5)] z-20 bg-background">
+                <img
+                  src={image1}
+                  alt="Shovidhyan D"
+                  className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-500"
                 />
               </div>
             </div>
-            
+
             {/* Floating Name Tag */}
-            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-card border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-bounce-slow backdrop-blur-sm">
+            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-card/90 border border-primary/30 rounded-2xl px-8 py-4 shadow-lg animate-bounce-slow backdrop-blur-sm z-30 whitespace-nowrap">
               <h2 className="text-2xl font-bold text-primary">Shovidhyan Devaraj</h2>
             </div>
           </div>

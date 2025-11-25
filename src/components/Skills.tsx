@@ -23,7 +23,7 @@ const skills = [
   },
   {
     name: "AWS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
     description: "Hands-on experience with cloud computing, AWS services, and deployment strategies.",
   },
   {
