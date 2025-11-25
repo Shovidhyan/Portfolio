@@ -76,7 +76,7 @@ If you want to run this project locally on your machine, follow these steps:
 **Shovidhyan Devaraj**
 
 * 📧 **Email:** [shovidhyan77@gmail.com](mailto:shovidhyan77@gmail.com)
-* 🔗 **LinkedIn:** [Add your LinkedIn URL here]
+* 🔗 **LinkedIn:** [Shovidhyan Devaraj](https://www.linkedin.com/in/shovidhyan-devaraj/)
 * 🐙 **GitHub:** [https://github.com/shovidhyan](https://github.com/shovidhyan)
 
 ---
